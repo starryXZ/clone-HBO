@@ -219,12 +219,15 @@ button:hover{
     border-radius: 16px;
     border: 2px solid transparent;
     transition: 1s;
+    background-size: cover;
+    background-position: center;
 }
 
 .content_image{
     width: 100%;
     object-fit: cover;
     object-position: center;
+    transition: 1s;
 }
 
 .midia_card:hover{
@@ -232,6 +235,25 @@ button:hover{
     transform: scale(1.05);
 }
 
+.midia_card .content_image:hover{
+    opacity: 0;
+}
+
+.midia_card:nth-child(1):hover {
+    background-image: url(assets/hbo-hover_0.webp);
+}
 .midia_card:nth-child(2):hover {
+    background-image: url(assets/MAX-Hover.webp);
+}
+.midia_card:nth-child(3):hover {
+    background-image: url(assets/DC-Hover.webp);
+}
+.midia_card:nth-child(4):hover {
+    background-image: url(assets/WB-Hover.webp);
+}
+.midia_card:nth-child(5):hover {
     background-image: url(assets/CN-Hover.png);
+}
+.midia_card:nth-child(6):hover {
+    background-image: url(assets/UCL-Hover.webp);
 }
