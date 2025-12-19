@@ -184,6 +184,11 @@ button:hover{
     padding: 40px 60px;
     border-radius: 8px;
     justify-content: space-between;
+    transition: transform 1s ease-in-out;
+
+}
+.descripitin_offer{
+    font-size: 1rem;
 }
 
 .subscription_plan{
@@ -192,6 +197,17 @@ button:hover{
     font-size: 1.25rem;
     margin-bottom: 16px;
 }
+
+.subscription-section:has(.subscription_card:nth-child(1):hover)
+  .subscription_card:nth-child(2) {
+  transform: perspective(1000px) rotateY(-25deg);
+}
+
+.subscription-section:has(.subscription_card:nth-child(2):hover)
+  .subscription_card:nth-child(1) {
+  transform: perspective(1000px) rotateY(25deg);
+}
+
 .subscription_price{
     font-family: "Raleway", sans-serif;
     font-size: 2rem;
@@ -256,4 +272,102 @@ button:hover{
 }
 .midia_card:nth-child(6):hover {
     background-image: url(assets/UCL-Hover.webp);
+}
+
+footer{
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    padding: 24px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.links{
+    text-transform: uppercase;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.links a{
+    color: var(--link-color);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: 1s;
+
+}
+
+.links a:hover{
+    color: var(--text-color);
+}
+
+.copyright{
+    font-size: 0.75rem;
+    margin: 16px 0;
+    color: var(--link-color);
+    font-weight: lighter;
+}
+
+.social{
+    margin-top: 80px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 40px;
+}
+.social .social_logo{
+    object-fit: contain;
+}
+
+@media screen and (max-width: 480px) {
+    .links {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .navbar{
+        flex-direction: column;
+        padding: 32px 24px;
+        height: auto;
+        gap: 24px;
+    }
+
+    .navbar img{
+        width: 100px;
+    }
+    .first_section{
+        margin-top: 148px;
+    }
+
+    .subscription_card{
+        padding: 40px;
+    }
+    .subscription_plan{
+        flex-direction: column;
+    }
+
+    .subscription-section:has(.subscription_card:nth-child(1):hover)
+  .subscription_card:nth-child(2) {
+    transform: rotateY(0);
+}
+
+    .subscription-section:has(.subscription_card:nth-child(2):hover)
+  .subscription_card:nth-child(1) {
+    transform: rotateY(0);
+}
+
+    .midia_container{
+    grid-template-columns: repeat(6, 100%);
+    gap: 32px;
+    overflow: auto hidden;
+}
+
+    .midia_card:hover{
+    border: 2px solid var(--tertiary-color);
+    transform: scale(1);
+}
+
 }

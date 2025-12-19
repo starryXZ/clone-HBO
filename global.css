@@ -18,10 +18,22 @@
     scroll-behavior: smooth;
 
 }
+
 body {
     background-color: var(--primary-color);
     color: var(--text-color);
+
 }
+
+
+::-webkit-scrollbar{
+        width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--tertiary-color);
+}
+
 *{
     font-family: "Raleway", sans-serif;
     box-sizing: border-box;

@@ -1,0 +1,107 @@
+@import url(styles.css);
+.background_color{
+    background: url(assets/background-movies-series.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#body_login{
+    display: flex;
+    height: auto;
+    width: 100%;
+    flex-direction: column;
+
+}
+
+.login_section{
+    display: flex;
+    margin-top: calc(7% + 20px);
+    margin-bottom: 70px;
+    padding: 24px;
+
+}
+
+.login_container{
+    display: flex;
+    padding: 40px;
+    gap: 24px;
+    flex-direction: column;
+    background-color: var(--form-bg-color);
+    border-radius: 8px;
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+}
+
+.login_container h1{
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    font-size: 1.25rem;
+
+}
+
+.login_container label{
+    text-align: left;
+}
+
+.login_form{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+form input{
+    color: var(--text-color);
+    display: block;
+    background: var(--form-field-bg-color);
+    border: var(--form-field-border);
+    border-radius: 8px;
+    padding: 16px;
+    font-size: 1rem;
+}
+
+#footer_login{
+    justify-self: center;
+
+    position: relative;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+
+.buttons button{
+    font-size: 0.875rem;
+}
+
+.buttons a{
+    color: var(--link-color);
+    text-decoration: none;
+    margin-left: 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0;
+}
+
+
+@media screen and (max-width: 480px) {
+
+    .login_section{
+    margin-top: calc(7% + 148px);
+}
+
+    .buttons{
+        justify-self: flex-start;
+        text-align: left;
+        gap: 24px;
+    }
+
+    .buttons a{
+        margin: 0;
+    }
+}
